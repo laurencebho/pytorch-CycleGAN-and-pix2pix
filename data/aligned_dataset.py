@@ -2,6 +2,7 @@ import os
 from data.base_dataset import BaseDataset, get_params, get_transform
 from data.image_folder import make_dataset
 from PIL import Image
+import numpy as np
 
 
 class AlignedDataset(BaseDataset):
@@ -38,12 +39,14 @@ class AlignedDataset(BaseDataset):
         """
         # read a image given a random integer index
         AB_path = self.AB_paths[index]
-        AB = Image.open(AB_path).convert('RGB')
+        AB = Image.open(AB_path).convert('RGBA')
         # split AB image into A and B
         w, h = AB.size
-        w2 = int(w / 2)
-        A = AB.crop((0, 0, w2, h))
-        B = AB.crop((w2, 0, w, h))
+        A0 = AB.crop((0, 0, 224, h))
+        A1 = AB.crop((224, 0, 448, h))
+        B = AB.crop((448, 0, w, h))
+
+        A = np.hstack(A0,A1)
 
         # apply the same transform to both A and B
         transform_params = get_params(self.opt, A.size)
