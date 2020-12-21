@@ -1,0 +1,1109 @@
+----------------- Options ---------------
+               batch_size: 1                             
+                    beta1: 0.5                           
+          checkpoints_dir: ./checkpoints                 
+           continue_train: False                         
+                crop_size: 256                           
+                 dataroot: ./datasets/sketchy            	[default: None]
+             dataset_mode: aligned                       
+                direction: BtoA                          	[default: AtoB]
+              display_env: main                          
+             display_freq: 400                           
+               display_id: 0                             	[default: 1]
+            display_ncols: 4                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 256                           
+                    epoch: latest                        
+              epoch_count: 1                             
+                 gan_mode: vanilla                       
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                  isTrain: True                          	[default: None]
+                lambda_L1: 100.0                         
+                load_iter: 0                             	[default: 0]
+                load_size: 286                           
+                       lr: 0.0002                        
+           lr_decay_iters: 50                            
+                lr_policy: linear                        
+         max_dataset_size: inf                           
+                    model: pix2pix                       	[default: cycle_gan]
+                 n_epochs: 100                           
+           n_epochs_decay: 100                           
+               n_layers_D: 3                             
+                     name: sketchy_pix2pix               	[default: experiment_name]
+                      ndf: 64                            
+                     netD: basic                         
+                     netG: unet_256                      
+                      ngf: 64                            
+               no_dropout: False                         
+                  no_flip: False                         
+                  no_html: False                         
+                     norm: batch                         
+              num_threads: 4                             
+                output_nc: 3                             
+                    phase: train                         
+                pool_size: 0                             
+               preprocess: resize_and_crop               
+               print_freq: 100                           
+             save_by_iter: False                         
+          save_epoch_freq: 5                             
+         save_latest_freq: 5000                          
+           serial_batches: False                         
+                   suffix:                               
+         update_html_freq: 1000                          
+                  verbose: False                         
+----------------- End -------------------
+dataset [AlignedDataset] was created
+The number of training images = 22
+initialize network with normal
+initialize network with normal
+model [Pix2PixModel] was created
+---------- Networks initialized -------------
+[Network G] Total number of parameters : 54.414 M
+[Network D] Total number of parameters : 2.769 M
+-----------------------------------------------
+create web directory ./checkpoints/sketchy_pix2pix/web...
+learning rate 0.0002000 -> 0.0002000
+/home2/gftw82/pix2pixenv/lib/python3.6/site-packages/torch/optim/lr_scheduler.py:136: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+End of epoch 1 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 2 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 3 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 4 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 5, iters: 12, time: 0.055, data: 0.289) G_GAN: 3.271 G_L1: 10.154 D_real: 0.073 D_fake: 0.040 
+saving the model at the end of epoch 5, iters 110
+End of epoch 5 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 6 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 7 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 8 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 9 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 10, iters: 2, time: 0.057, data: 0.001) G_GAN: 4.902 G_L1: 9.628 D_real: 0.011 D_fake: 0.009 
+saving the model at the end of epoch 10, iters 220
+End of epoch 10 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 11 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 12 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 13 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 14, iters: 14, time: 0.055, data: 0.000) G_GAN: 5.620 G_L1: 7.703 D_real: 0.001 D_fake: 1.653 
+End of epoch 14 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 15, iters 330
+End of epoch 15 / 200 	 Time Taken: 5 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 16 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 17 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 18 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 19, iters: 4, time: 0.273, data: 0.001) G_GAN: 3.774 G_L1: 9.664 D_real: 0.056 D_fake: 0.065 
+End of epoch 19 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 20, iters 440
+End of epoch 20 / 200 	 Time Taken: 5 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 21 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 22 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 23, iters: 16, time: 0.052, data: 0.007) G_GAN: 2.012 G_L1: 7.464 D_real: 0.059 D_fake: 0.133 
+End of epoch 23 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 24 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 25, iters 550
+End of epoch 25 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 26 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 27 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 28, iters: 6, time: 0.056, data: 0.001) G_GAN: 4.277 G_L1: 11.077 D_real: 0.020 D_fake: 0.035 
+End of epoch 28 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 29 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 30, iters 660
+End of epoch 30 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 31 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 32, iters: 18, time: 0.055, data: 0.000) G_GAN: 2.818 G_L1: 9.497 D_real: 0.009 D_fake: 0.093 
+End of epoch 32 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 33 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 34 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 35, iters 770
+End of epoch 35 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 36 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 37, iters: 8, time: 0.204, data: 0.001) G_GAN: 5.870 G_L1: 10.539 D_real: 0.027 D_fake: 0.009 
+End of epoch 37 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 38 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 39 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 40, iters 880
+End of epoch 40 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 41, iters: 20, time: 0.056, data: 0.001) G_GAN: 3.111 G_L1: 12.726 D_real: 0.002 D_fake: 0.031 
+End of epoch 41 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 42 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 43 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 44 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 45, iters 990
+End of epoch 45 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 46, iters: 10, time: 0.056, data: 0.001) G_GAN: 1.547 G_L1: 5.247 D_real: 0.160 D_fake: 0.452 
+End of epoch 46 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 47 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 48 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 49 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 50, iters: 22, time: 0.055, data: 0.001) G_GAN: 1.567 G_L1: 6.785 D_real: 1.296 D_fake: 0.030 
+saving the model at the end of epoch 50, iters 1100
+End of epoch 50 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 51 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 52 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 53 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 54 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 55, iters: 12, time: 0.228, data: 0.248) G_GAN: 3.991 G_L1: 8.544 D_real: 0.003 D_fake: 0.023 
+saving the model at the end of epoch 55, iters 1210
+End of epoch 55 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 56 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 57 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 58 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 59 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 60, iters: 2, time: 0.051, data: 0.001) G_GAN: 3.126 G_L1: 8.099 D_real: 0.081 D_fake: 0.098 
+saving the model at the end of epoch 60, iters 1320
+End of epoch 60 / 200 	 Time Taken: 5 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 61 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 62 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 63 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 64, iters: 14, time: 0.057, data: 0.000) G_GAN: 2.994 G_L1: 9.562 D_real: 0.053 D_fake: 0.096 
+End of epoch 64 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 65, iters 1430
+End of epoch 65 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 66 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 67 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 68 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 69, iters: 4, time: 0.057, data: 0.001) G_GAN: 2.297 G_L1: 9.409 D_real: 0.002 D_fake: 0.376 
+End of epoch 69 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 70, iters 1540
+End of epoch 70 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 71 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 72 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 73, iters: 16, time: 0.283, data: 0.000) G_GAN: 2.977 G_L1: 12.088 D_real: 0.000 D_fake: 0.255 
+End of epoch 73 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 74 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 75, iters 1650
+End of epoch 75 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 76 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 77 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 78, iters: 6, time: 0.056, data: 0.002) G_GAN: 4.248 G_L1: 9.616 D_real: 0.060 D_fake: 0.056 
+End of epoch 78 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 79 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 80, iters 1760
+End of epoch 80 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 81 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 82, iters: 18, time: 0.055, data: 0.000) G_GAN: 3.582 G_L1: 9.392 D_real: 0.004 D_fake: 0.059 
+End of epoch 82 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 83 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 84 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 85, iters 1870
+End of epoch 85 / 200 	 Time Taken: 8 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 86 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 87, iters: 8, time: 0.058, data: 0.001) G_GAN: 0.854 G_L1: 6.219 D_real: 2.018 D_fake: 0.086 
+End of epoch 87 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 88 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 89 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 90, iters 1980
+End of epoch 90 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 91, iters: 20, time: 0.323, data: 0.001) G_GAN: 4.275 G_L1: 9.665 D_real: 0.020 D_fake: 0.505 
+End of epoch 91 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 92 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 93 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 94 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 95, iters 2090
+End of epoch 95 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 96, iters: 10, time: 0.056, data: 0.001) G_GAN: 2.471 G_L1: 7.556 D_real: 0.003 D_fake: 0.532 
+End of epoch 96 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 97 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 98 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 99 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0001980
+(epoch: 100, iters: 22, time: 0.053, data: 0.001) G_GAN: 3.181 G_L1: 12.759 D_real: 0.005 D_fake: 0.398 
+saving the model at the end of epoch 100, iters 2200
+End of epoch 100 / 200 	 Time Taken: 3 sec
+learning rate 0.0001980 -> 0.0001960
+End of epoch 101 / 200 	 Time Taken: 1 sec
+learning rate 0.0001960 -> 0.0001941
+End of epoch 102 / 200 	 Time Taken: 1 sec
+learning rate 0.0001941 -> 0.0001921
+End of epoch 103 / 200 	 Time Taken: 1 sec
+learning rate 0.0001921 -> 0.0001901
+End of epoch 104 / 200 	 Time Taken: 1 sec
+learning rate 0.0001901 -> 0.0001881
+(epoch: 105, iters: 12, time: 0.056, data: 0.269) G_GAN: 2.995 G_L1: 20.930 D_real: 0.000 D_fake: 0.710 
+saving the model at the end of epoch 105, iters 2310
+End of epoch 105 / 200 	 Time Taken: 2 sec
+learning rate 0.0001881 -> 0.0001861
+End of epoch 106 / 200 	 Time Taken: 1 sec
+learning rate 0.0001861 -> 0.0001842
+End of epoch 107 / 200 	 Time Taken: 1 sec
+learning rate 0.0001842 -> 0.0001822
+End of epoch 108 / 200 	 Time Taken: 1 sec
+learning rate 0.0001822 -> 0.0001802
+End of epoch 109 / 200 	 Time Taken: 1 sec
+learning rate 0.0001802 -> 0.0001782
+(epoch: 110, iters: 2, time: 0.363, data: 0.001) G_GAN: 2.814 G_L1: 11.377 D_real: 0.012 D_fake: 0.156 
+saving the model at the end of epoch 110, iters 2420
+End of epoch 110 / 200 	 Time Taken: 3 sec
+learning rate 0.0001782 -> 0.0001762
+End of epoch 111 / 200 	 Time Taken: 1 sec
+learning rate 0.0001762 -> 0.0001743
+End of epoch 112 / 200 	 Time Taken: 1 sec
+learning rate 0.0001743 -> 0.0001723
+End of epoch 113 / 200 	 Time Taken: 1 sec
+learning rate 0.0001723 -> 0.0001703
+(epoch: 114, iters: 14, time: 0.057, data: 0.003) G_GAN: 2.883 G_L1: 8.533 D_real: 0.472 D_fake: 0.029 
+End of epoch 114 / 200 	 Time Taken: 1 sec
+learning rate 0.0001703 -> 0.0001683
+saving the model at the end of epoch 115, iters 2530
+End of epoch 115 / 200 	 Time Taken: 3 sec
+learning rate 0.0001683 -> 0.0001663
+End of epoch 116 / 200 	 Time Taken: 1 sec
+learning rate 0.0001663 -> 0.0001644
+End of epoch 117 / 200 	 Time Taken: 1 sec
+learning rate 0.0001644 -> 0.0001624
+End of epoch 118 / 200 	 Time Taken: 1 sec
+learning rate 0.0001624 -> 0.0001604
+(epoch: 119, iters: 4, time: 0.058, data: 0.001) G_GAN: 0.284 G_L1: 7.459 D_real: 2.181 D_fake: 0.267 
+End of epoch 119 / 200 	 Time Taken: 1 sec
+learning rate 0.0001604 -> 0.0001584
+saving the model at the end of epoch 120, iters 2640
+End of epoch 120 / 200 	 Time Taken: 3 sec
+learning rate 0.0001584 -> 0.0001564
+End of epoch 121 / 200 	 Time Taken: 1 sec
+learning rate 0.0001564 -> 0.0001545
+End of epoch 122 / 200 	 Time Taken: 1 sec
+learning rate 0.0001545 -> 0.0001525
+(epoch: 123, iters: 16, time: 0.055, data: 0.001) G_GAN: 2.760 G_L1: 13.162 D_real: 0.001 D_fake: 0.180 
+End of epoch 123 / 200 	 Time Taken: 1 sec
+learning rate 0.0001525 -> 0.0001505
+End of epoch 124 / 200 	 Time Taken: 1 sec
+learning rate 0.0001505 -> 0.0001485
+saving the model at the end of epoch 125, iters 2750
+End of epoch 125 / 200 	 Time Taken: 3 sec
+learning rate 0.0001485 -> 0.0001465
+End of epoch 126 / 200 	 Time Taken: 1 sec
+learning rate 0.0001465 -> 0.0001446
+End of epoch 127 / 200 	 Time Taken: 1 sec
+learning rate 0.0001446 -> 0.0001426
+(epoch: 128, iters: 6, time: 0.480, data: 0.001) G_GAN: 2.772 G_L1: 10.499 D_real: 0.049 D_fake: 0.091 
+End of epoch 128 / 200 	 Time Taken: 1 sec
+learning rate 0.0001426 -> 0.0001406
+End of epoch 129 / 200 	 Time Taken: 1 sec
+learning rate 0.0001406 -> 0.0001386
+saving the model at the end of epoch 130, iters 2860
+End of epoch 130 / 200 	 Time Taken: 3 sec
+learning rate 0.0001386 -> 0.0001366
+End of epoch 131 / 200 	 Time Taken: 1 sec
+learning rate 0.0001366 -> 0.0001347
+(epoch: 132, iters: 18, time: 0.056, data: 0.001) G_GAN: 2.227 G_L1: 10.305 D_real: 0.026 D_fake: 0.066 
+End of epoch 132 / 200 	 Time Taken: 1 sec
+learning rate 0.0001347 -> 0.0001327
+End of epoch 133 / 200 	 Time Taken: 1 sec
+learning rate 0.0001327 -> 0.0001307
+End of epoch 134 / 200 	 Time Taken: 1 sec
+learning rate 0.0001307 -> 0.0001287
+saving the model at the end of epoch 135, iters 2970
+End of epoch 135 / 200 	 Time Taken: 3 sec
+learning rate 0.0001287 -> 0.0001267
+End of epoch 136 / 200 	 Time Taken: 1 sec
+learning rate 0.0001267 -> 0.0001248
+(epoch: 137, iters: 8, time: 0.058, data: 0.001) G_GAN: 2.799 G_L1: 10.349 D_real: 0.076 D_fake: 0.125 
+End of epoch 137 / 200 	 Time Taken: 1 sec
+learning rate 0.0001248 -> 0.0001228
+End of epoch 138 / 200 	 Time Taken: 1 sec
+learning rate 0.0001228 -> 0.0001208
+End of epoch 139 / 200 	 Time Taken: 1 sec
+learning rate 0.0001208 -> 0.0001188
+saving the model at the end of epoch 140, iters 3080
+End of epoch 140 / 200 	 Time Taken: 2 sec
+learning rate 0.0001188 -> 0.0001168
+(epoch: 141, iters: 20, time: 0.053, data: 0.000) G_GAN: 1.589 G_L1: 9.969 D_real: 0.254 D_fake: 0.294 
+End of epoch 141 / 200 	 Time Taken: 1 sec
+learning rate 0.0001168 -> 0.0001149
+End of epoch 142 / 200 	 Time Taken: 1 sec
+learning rate 0.0001149 -> 0.0001129
+End of epoch 143 / 200 	 Time Taken: 1 sec
+learning rate 0.0001129 -> 0.0001109
+End of epoch 144 / 200 	 Time Taken: 1 sec
+learning rate 0.0001109 -> 0.0001089
+saving the model at the end of epoch 145, iters 3190
+End of epoch 145 / 200 	 Time Taken: 3 sec
+learning rate 0.0001089 -> 0.0001069
+(epoch: 146, iters: 10, time: 0.426, data: 0.001) G_GAN: 2.565 G_L1: 9.066 D_real: 0.010 D_fake: 0.343 
+End of epoch 146 / 200 	 Time Taken: 1 sec
+learning rate 0.0001069 -> 0.0001050
+End of epoch 147 / 200 	 Time Taken: 1 sec
+learning rate 0.0001050 -> 0.0001030
+End of epoch 148 / 200 	 Time Taken: 1 sec
+learning rate 0.0001030 -> 0.0001010
+End of epoch 149 / 200 	 Time Taken: 1 sec
+learning rate 0.0001010 -> 0.0000990
+(epoch: 150, iters: 22, time: 0.053, data: 0.001) G_GAN: 1.386 G_L1: 9.140 D_real: 0.500 D_fake: 0.551 
+saving the model at the end of epoch 150, iters 3300
+End of epoch 150 / 200 	 Time Taken: 7 sec
+learning rate 0.0000990 -> 0.0000970
+End of epoch 151 / 200 	 Time Taken: 1 sec
+learning rate 0.0000970 -> 0.0000950
+End of epoch 152 / 200 	 Time Taken: 1 sec
+learning rate 0.0000950 -> 0.0000931
+End of epoch 153 / 200 	 Time Taken: 1 sec
+learning rate 0.0000931 -> 0.0000911
+End of epoch 154 / 200 	 Time Taken: 1 sec
+learning rate 0.0000911 -> 0.0000891
+(epoch: 155, iters: 12, time: 0.056, data: 0.247) G_GAN: 2.609 G_L1: 11.873 D_real: 0.032 D_fake: 0.205 
+saving the model at the end of epoch 155, iters 3410
+End of epoch 155 / 200 	 Time Taken: 3 sec
+learning rate 0.0000891 -> 0.0000871
+End of epoch 156 / 200 	 Time Taken: 1 sec
+learning rate 0.0000871 -> 0.0000851
+End of epoch 157 / 200 	 Time Taken: 1 sec
+learning rate 0.0000851 -> 0.0000832
+End of epoch 158 / 200 	 Time Taken: 1 sec
+learning rate 0.0000832 -> 0.0000812
+End of epoch 159 / 200 	 Time Taken: 1 sec
+learning rate 0.0000812 -> 0.0000792
+(epoch: 160, iters: 2, time: 0.056, data: 0.001) G_GAN: 1.824 G_L1: 7.903 D_real: 0.831 D_fake: 0.080 
+saving the model at the end of epoch 160, iters 3520
+End of epoch 160 / 200 	 Time Taken: 3 sec
+learning rate 0.0000792 -> 0.0000772
+End of epoch 161 / 200 	 Time Taken: 1 sec
+learning rate 0.0000772 -> 0.0000752
+End of epoch 162 / 200 	 Time Taken: 1 sec
+learning rate 0.0000752 -> 0.0000733
+End of epoch 163 / 200 	 Time Taken: 1 sec
+learning rate 0.0000733 -> 0.0000713
+(epoch: 164, iters: 14, time: 0.472, data: 0.000) G_GAN: 2.041 G_L1: 8.680 D_real: 0.174 D_fake: 0.217 
+End of epoch 164 / 200 	 Time Taken: 1 sec
+learning rate 0.0000713 -> 0.0000693
+saving the model at the end of epoch 165, iters 3630
+End of epoch 165 / 200 	 Time Taken: 2 sec
+learning rate 0.0000693 -> 0.0000673
+End of epoch 166 / 200 	 Time Taken: 1 sec
+learning rate 0.0000673 -> 0.0000653
+End of epoch 167 / 200 	 Time Taken: 1 sec
+learning rate 0.0000653 -> 0.0000634
+End of epoch 168 / 200 	 Time Taken: 1 sec
+learning rate 0.0000634 -> 0.0000614
+(epoch: 169, iters: 4, time: 0.057, data: 0.001) G_GAN: 1.396 G_L1: 6.986 D_real: 0.851 D_fake: 0.185 
+End of epoch 169 / 200 	 Time Taken: 1 sec
+learning rate 0.0000614 -> 0.0000594
+saving the model at the end of epoch 170, iters 3740
+End of epoch 170 / 200 	 Time Taken: 2 sec
+learning rate 0.0000594 -> 0.0000574
+End of epoch 171 / 200 	 Time Taken: 1 sec
+learning rate 0.0000574 -> 0.0000554
+End of epoch 172 / 200 	 Time Taken: 1 sec
+learning rate 0.0000554 -> 0.0000535
+(epoch: 173, iters: 16, time: 0.055, data: 0.000) G_GAN: 2.751 G_L1: 11.614 D_real: 0.114 D_fake: 0.140 
+End of epoch 173 / 200 	 Time Taken: 1 sec
+learning rate 0.0000535 -> 0.0000515
+End of epoch 174 / 200 	 Time Taken: 1 sec
+learning rate 0.0000515 -> 0.0000495
+saving the model at the end of epoch 175, iters 3850
+End of epoch 175 / 200 	 Time Taken: 3 sec
+learning rate 0.0000495 -> 0.0000475
+End of epoch 176 / 200 	 Time Taken: 1 sec
+learning rate 0.0000475 -> 0.0000455
+End of epoch 177 / 200 	 Time Taken: 1 sec
+learning rate 0.0000455 -> 0.0000436
+(epoch: 178, iters: 6, time: 0.055, data: 0.002) G_GAN: 2.477 G_L1: 14.033 D_real: 0.018 D_fake: 0.968 
+End of epoch 178 / 200 	 Time Taken: 1 sec
+learning rate 0.0000436 -> 0.0000416
+End of epoch 179 / 200 	 Time Taken: 1 sec
+learning rate 0.0000416 -> 0.0000396
+saving the model at the end of epoch 180, iters 3960
+End of epoch 180 / 200 	 Time Taken: 3 sec
+learning rate 0.0000396 -> 0.0000376
+End of epoch 181 / 200 	 Time Taken: 1 sec
+learning rate 0.0000376 -> 0.0000356
+(epoch: 182, iters: 18, time: 0.495, data: 0.000) G_GAN: 2.858 G_L1: 9.429 D_real: 0.022 D_fake: 0.099 
+End of epoch 182 / 200 	 Time Taken: 1 sec
+learning rate 0.0000356 -> 0.0000337
+End of epoch 183 / 200 	 Time Taken: 1 sec
+learning rate 0.0000337 -> 0.0000317
+End of epoch 184 / 200 	 Time Taken: 1 sec
+learning rate 0.0000317 -> 0.0000297
+saving the model at the end of epoch 185, iters 4070
+End of epoch 185 / 200 	 Time Taken: 3 sec
+learning rate 0.0000297 -> 0.0000277
+End of epoch 186 / 200 	 Time Taken: 1 sec
+learning rate 0.0000277 -> 0.0000257
+(epoch: 187, iters: 8, time: 0.057, data: 0.001) G_GAN: 1.781 G_L1: 7.135 D_real: 0.301 D_fake: 0.268 
+End of epoch 187 / 200 	 Time Taken: 1 sec
+learning rate 0.0000257 -> 0.0000238
+End of epoch 188 / 200 	 Time Taken: 1 sec
+learning rate 0.0000238 -> 0.0000218
+End of epoch 189 / 200 	 Time Taken: 1 sec
+learning rate 0.0000218 -> 0.0000198
+saving the model at the end of epoch 190, iters 4180
+End of epoch 190 / 200 	 Time Taken: 8 sec
+learning rate 0.0000198 -> 0.0000178
+(epoch: 191, iters: 20, time: 0.055, data: 0.001) G_GAN: 2.283 G_L1: 9.188 D_real: 0.127 D_fake: 0.151 
+End of epoch 191 / 200 	 Time Taken: 1 sec
+learning rate 0.0000178 -> 0.0000158
+End of epoch 192 / 200 	 Time Taken: 1 sec
+learning rate 0.0000158 -> 0.0000139
+End of epoch 193 / 200 	 Time Taken: 1 sec
+learning rate 0.0000139 -> 0.0000119
+End of epoch 194 / 200 	 Time Taken: 1 sec
+learning rate 0.0000119 -> 0.0000099
+saving the model at the end of epoch 195, iters 4290
+End of epoch 195 / 200 	 Time Taken: 3 sec
+learning rate 0.0000099 -> 0.0000079
+(epoch: 196, iters: 10, time: 0.056, data: 0.001) G_GAN: 1.507 G_L1: 8.402 D_real: 0.271 D_fake: 0.299 
+End of epoch 196 / 200 	 Time Taken: 1 sec
+learning rate 0.0000079 -> 0.0000059
+End of epoch 197 / 200 	 Time Taken: 1 sec
+learning rate 0.0000059 -> 0.0000040
+End of epoch 198 / 200 	 Time Taken: 1 sec
+learning rate 0.0000040 -> 0.0000020
+End of epoch 199 / 200 	 Time Taken: 1 sec
+learning rate 0.0000020 -> 0.0000000
+(epoch: 200, iters: 22, time: 0.675, data: 0.001) G_GAN: 2.852 G_L1: 11.425 D_real: 0.067 D_fake: 0.076 
+saving the model at the end of epoch 200, iters 4400
+End of epoch 200 / 200 	 Time Taken: 4 sec
+----------------- Options ---------------
+               batch_size: 1                             
+                    beta1: 0.5                           
+          checkpoints_dir: ./checkpoints                 
+           continue_train: False                         
+                crop_size: 256                           
+                 dataroot: ./datasets/sketchy            	[default: None]
+             dataset_mode: aligned                       
+                direction: BtoA                          	[default: AtoB]
+              display_env: main                          
+             display_freq: 400                           
+               display_id: 0                             	[default: 1]
+            display_ncols: 4                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 256                           
+                    epoch: latest                        
+              epoch_count: 1                             
+                 gan_mode: vanilla                       
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                  isTrain: True                          	[default: None]
+                lambda_L1: 100.0                         
+                load_iter: 0                             	[default: 0]
+                load_size: 286                           
+                       lr: 0.0002                        
+           lr_decay_iters: 50                            
+                lr_policy: linear                        
+         max_dataset_size: inf                           
+                    model: pix2pix                       	[default: cycle_gan]
+                 n_epochs: 100                           
+           n_epochs_decay: 100                           
+               n_layers_D: 3                             
+                     name: sketchy_pix2pix               	[default: experiment_name]
+                      ndf: 64                            
+                     netD: basic                         
+                     netG: unet_256                      
+                      ngf: 64                            
+               no_dropout: False                         
+                  no_flip: False                         
+                  no_html: False                         
+                     norm: batch                         
+              num_threads: 4                             
+                output_nc: 3                             
+                    phase: train                         
+                pool_size: 0                             
+               preprocess: resize_and_crop               
+               print_freq: 100                           
+             save_by_iter: False                         
+          save_epoch_freq: 5                             
+         save_latest_freq: 5000                          
+           serial_batches: False                         
+                   suffix:                               
+         update_html_freq: 1000                          
+                  verbose: False                         
+----------------- End -------------------
+dataset [AlignedDataset] was created
+The number of training images = 22
+initialize network with normal
+initialize network with normal
+model [Pix2PixModel] was created
+---------- Networks initialized -------------
+[Network G] Total number of parameters : 54.414 M
+[Network D] Total number of parameters : 2.769 M
+-----------------------------------------------
+create web directory ./checkpoints/sketchy_pix2pix/web...
+learning rate 0.0002000 -> 0.0002000
+/home2/gftw82/pix2pixenv/lib/python3.6/site-packages/torch/optim/lr_scheduler.py:136: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+End of epoch 1 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 2 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 3 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 4 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 5, iters: 12, time: 0.056, data: 0.283) G_GAN: 3.624 G_L1: 14.597 D_real: 0.041 D_fake: 0.267 
+saving the model at the end of epoch 5, iters 110
+End of epoch 5 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 6 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 7 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 8 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 9 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 10, iters: 2, time: 0.053, data: 0.001) G_GAN: 4.648 G_L1: 6.668 D_real: 0.027 D_fake: 0.011 
+saving the model at the end of epoch 10, iters 220
+End of epoch 10 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 11 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 12 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 13 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 14, iters: 14, time: 0.056, data: 0.001) G_GAN: 3.864 G_L1: 9.952 D_real: 0.010 D_fake: 0.033 
+End of epoch 14 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 15, iters 330
+End of epoch 15 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 16 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 17 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 18 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 19, iters: 4, time: 0.159, data: 0.001) G_GAN: 3.380 G_L1: 5.620 D_real: 0.090 D_fake: 0.051 
+End of epoch 19 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 20, iters 440
+End of epoch 20 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 21 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 22 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 23, iters: 16, time: 0.056, data: 0.000) G_GAN: 3.734 G_L1: 20.434 D_real: 0.001 D_fake: 0.044 
+End of epoch 23 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 24 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 25, iters 550
+End of epoch 25 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 26 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 27 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 28, iters: 6, time: 0.058, data: 0.001) G_GAN: 3.390 G_L1: 10.747 D_real: 0.015 D_fake: 0.175 
+End of epoch 28 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 29 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 30, iters 660
+End of epoch 30 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 31 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 32, iters: 18, time: 0.056, data: 0.000) G_GAN: 2.232 G_L1: 11.787 D_real: 0.007 D_fake: 0.513 
+End of epoch 32 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 33 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 34 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 35, iters 770
+End of epoch 35 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 36 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 37, iters: 8, time: 0.195, data: 0.001) G_GAN: 1.534 G_L1: 6.650 D_real: 1.968 D_fake: 0.024 
+End of epoch 37 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 38 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 39 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 40, iters 880
+End of epoch 40 / 200 	 Time Taken: 6 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 41, iters: 20, time: 0.055, data: 0.002) G_GAN: 2.335 G_L1: 7.957 D_real: 0.325 D_fake: 0.017 
+End of epoch 41 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 42 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 43 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 44 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 45, iters 990
+End of epoch 45 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 46, iters: 10, time: 0.055, data: 0.001) G_GAN: 2.451 G_L1: 7.646 D_real: 0.044 D_fake: 0.234 
+End of epoch 46 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 47 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 48 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 49 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 50, iters: 22, time: 0.055, data: 0.001) G_GAN: 2.994 G_L1: 10.094 D_real: 0.011 D_fake: 0.167 
+saving the model at the end of epoch 50, iters 1100
+End of epoch 50 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 51 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 52 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 53 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 54 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 55, iters: 12, time: 0.228, data: 0.209) G_GAN: 4.077 G_L1: 10.085 D_real: 0.011 D_fake: 0.043 
+saving the model at the end of epoch 55, iters 1210
+End of epoch 55 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 56 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 57 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 58 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 59 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 60, iters: 2, time: 0.050, data: 0.002) G_GAN: 3.427 G_L1: 10.991 D_real: 0.244 D_fake: 0.250 
+saving the model at the end of epoch 60, iters 1320
+End of epoch 60 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 61 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 62 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 63 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 64, iters: 14, time: 0.057, data: 0.001) G_GAN: 2.893 G_L1: 9.436 D_real: 0.091 D_fake: 0.109 
+End of epoch 64 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 65, iters 1430
+End of epoch 65 / 200 	 Time Taken: 6 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 66 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 67 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 68 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 69, iters: 4, time: 0.057, data: 0.001) G_GAN: 2.487 G_L1: 9.972 D_real: 0.038 D_fake: 0.060 
+End of epoch 69 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 70, iters 1540
+End of epoch 70 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 71 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 72 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 73, iters: 16, time: 0.293, data: 0.000) G_GAN: 3.245 G_L1: 9.971 D_real: 0.012 D_fake: 0.073 
+End of epoch 73 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 74 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 75, iters 1650
+End of epoch 75 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 76 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 77 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 78, iters: 6, time: 0.055, data: 0.001) G_GAN: 5.040 G_L1: 11.238 D_real: 0.171 D_fake: 0.069 
+End of epoch 78 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 79 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 80, iters 1760
+End of epoch 80 / 200 	 Time Taken: 7 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 81 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 82, iters: 18, time: 0.055, data: 0.000) G_GAN: 1.735 G_L1: 6.196 D_real: 1.223 D_fake: 0.050 
+End of epoch 82 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 83 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 84 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 85, iters 1870
+End of epoch 85 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 86 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 87, iters: 8, time: 0.056, data: 0.001) G_GAN: 3.225 G_L1: 10.692 D_real: 0.059 D_fake: 0.048 
+End of epoch 87 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 88 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 89 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 90, iters 1980
+End of epoch 90 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 91, iters: 20, time: 0.304, data: 0.001) G_GAN: 2.705 G_L1: 9.967 D_real: 0.019 D_fake: 0.124 
+End of epoch 91 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 92 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 93 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 94 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+saving the model at the end of epoch 95, iters 2090
+End of epoch 95 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 96, iters: 10, time: 0.057, data: 0.001) G_GAN: 2.703 G_L1: 7.446 D_real: 0.247 D_fake: 0.048 
+End of epoch 96 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 97 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 98 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0002000
+End of epoch 99 / 200 	 Time Taken: 1 sec
+learning rate 0.0002000 -> 0.0001980
+(epoch: 100, iters: 22, time: 0.054, data: 0.001) G_GAN: 3.074 G_L1: 10.195 D_real: 0.067 D_fake: 0.451 
+saving the model at the end of epoch 100, iters 2200
+End of epoch 100 / 200 	 Time Taken: 4 sec
+learning rate 0.0001980 -> 0.0001960
+End of epoch 101 / 200 	 Time Taken: 1 sec
+learning rate 0.0001960 -> 0.0001941
+End of epoch 102 / 200 	 Time Taken: 1 sec
+learning rate 0.0001941 -> 0.0001921
+End of epoch 103 / 200 	 Time Taken: 1 sec
+learning rate 0.0001921 -> 0.0001901
+End of epoch 104 / 200 	 Time Taken: 1 sec
+learning rate 0.0001901 -> 0.0001881
+(epoch: 105, iters: 12, time: 0.056, data: 0.192) G_GAN: 3.112 G_L1: 11.476 D_real: 0.021 D_fake: 0.090 
+saving the model at the end of epoch 105, iters 2310
+End of epoch 105 / 200 	 Time Taken: 3 sec
+learning rate 0.0001881 -> 0.0001861
+End of epoch 106 / 200 	 Time Taken: 1 sec
+learning rate 0.0001861 -> 0.0001842
+End of epoch 107 / 200 	 Time Taken: 1 sec
+learning rate 0.0001842 -> 0.0001822
+End of epoch 108 / 200 	 Time Taken: 1 sec
+learning rate 0.0001822 -> 0.0001802
+End of epoch 109 / 200 	 Time Taken: 1 sec
+learning rate 0.0001802 -> 0.0001782
+(epoch: 110, iters: 2, time: 0.356, data: 0.001) G_GAN: 2.819 G_L1: 11.504 D_real: 0.004 D_fake: 0.089 
+saving the model at the end of epoch 110, iters 2420
+End of epoch 110 / 200 	 Time Taken: 3 sec
+learning rate 0.0001782 -> 0.0001762
+End of epoch 111 / 200 	 Time Taken: 1 sec
+learning rate 0.0001762 -> 0.0001743
+End of epoch 112 / 200 	 Time Taken: 1 sec
+learning rate 0.0001743 -> 0.0001723
+End of epoch 113 / 200 	 Time Taken: 1 sec
+learning rate 0.0001723 -> 0.0001703
+(epoch: 114, iters: 14, time: 0.056, data: 0.000) G_GAN: 4.463 G_L1: 11.201 D_real: 0.118 D_fake: 0.021 
+End of epoch 114 / 200 	 Time Taken: 1 sec
+learning rate 0.0001703 -> 0.0001683
+saving the model at the end of epoch 115, iters 2530
+End of epoch 115 / 200 	 Time Taken: 3 sec
+learning rate 0.0001683 -> 0.0001663
+End of epoch 116 / 200 	 Time Taken: 1 sec
+learning rate 0.0001663 -> 0.0001644
+End of epoch 117 / 200 	 Time Taken: 1 sec
+learning rate 0.0001644 -> 0.0001624
+End of epoch 118 / 200 	 Time Taken: 1 sec
+learning rate 0.0001624 -> 0.0001604
+(epoch: 119, iters: 4, time: 0.057, data: 0.001) G_GAN: 0.887 G_L1: 7.370 D_real: 0.299 D_fake: 0.648 
+End of epoch 119 / 200 	 Time Taken: 1 sec
+learning rate 0.0001604 -> 0.0001584
+saving the model at the end of epoch 120, iters 2640
+End of epoch 120 / 200 	 Time Taken: 2 sec
+learning rate 0.0001584 -> 0.0001564
+End of epoch 121 / 200 	 Time Taken: 1 sec
+learning rate 0.0001564 -> 0.0001545
+End of epoch 122 / 200 	 Time Taken: 1 sec
+learning rate 0.0001545 -> 0.0001525
+(epoch: 123, iters: 16, time: 0.055, data: 0.001) G_GAN: 3.582 G_L1: 20.092 D_real: 0.001 D_fake: 0.066 
+End of epoch 123 / 200 	 Time Taken: 1 sec
+learning rate 0.0001525 -> 0.0001505
+End of epoch 124 / 200 	 Time Taken: 1 sec
+learning rate 0.0001505 -> 0.0001485
+saving the model at the end of epoch 125, iters 2750
+End of epoch 125 / 200 	 Time Taken: 2 sec
+learning rate 0.0001485 -> 0.0001465
+End of epoch 126 / 200 	 Time Taken: 1 sec
+learning rate 0.0001465 -> 0.0001446
+End of epoch 127 / 200 	 Time Taken: 1 sec
+learning rate 0.0001446 -> 0.0001426
+(epoch: 128, iters: 6, time: 0.448, data: 0.001) G_GAN: 3.740 G_L1: 8.811 D_real: 0.262 D_fake: 0.017 
+End of epoch 128 / 200 	 Time Taken: 1 sec
+learning rate 0.0001426 -> 0.0001406
+End of epoch 129 / 200 	 Time Taken: 1 sec
+learning rate 0.0001406 -> 0.0001386
+saving the model at the end of epoch 130, iters 2860
+End of epoch 130 / 200 	 Time Taken: 2 sec
+learning rate 0.0001386 -> 0.0001366
+End of epoch 131 / 200 	 Time Taken: 1 sec
+learning rate 0.0001366 -> 0.0001347
+(epoch: 132, iters: 18, time: 0.056, data: 0.000) G_GAN: 3.945 G_L1: 8.146 D_real: 0.016 D_fake: 0.035 
+End of epoch 132 / 200 	 Time Taken: 1 sec
+learning rate 0.0001347 -> 0.0001327
+End of epoch 133 / 200 	 Time Taken: 1 sec
+learning rate 0.0001327 -> 0.0001307
+End of epoch 134 / 200 	 Time Taken: 1 sec
+learning rate 0.0001307 -> 0.0001287
+saving the model at the end of epoch 135, iters 2970
+End of epoch 135 / 200 	 Time Taken: 3 sec
+learning rate 0.0001287 -> 0.0001267
+End of epoch 136 / 200 	 Time Taken: 1 sec
+learning rate 0.0001267 -> 0.0001248
+(epoch: 137, iters: 8, time: 0.057, data: 0.002) G_GAN: 2.294 G_L1: 8.904 D_real: 0.145 D_fake: 0.192 
+End of epoch 137 / 200 	 Time Taken: 1 sec
+learning rate 0.0001248 -> 0.0001228
+End of epoch 138 / 200 	 Time Taken: 1 sec
+learning rate 0.0001228 -> 0.0001208
+End of epoch 139 / 200 	 Time Taken: 1 sec
+learning rate 0.0001208 -> 0.0001188
+saving the model at the end of epoch 140, iters 3080
+End of epoch 140 / 200 	 Time Taken: 4 sec
+learning rate 0.0001188 -> 0.0001168
+(epoch: 141, iters: 20, time: 0.056, data: 0.000) G_GAN: 2.910 G_L1: 10.067 D_real: 1.289 D_fake: 0.010 
+End of epoch 141 / 200 	 Time Taken: 2 sec
+learning rate 0.0001168 -> 0.0001149
+End of epoch 142 / 200 	 Time Taken: 1 sec
+learning rate 0.0001149 -> 0.0001129
+End of epoch 143 / 200 	 Time Taken: 1 sec
+learning rate 0.0001129 -> 0.0001109
+End of epoch 144 / 200 	 Time Taken: 1 sec
+learning rate 0.0001109 -> 0.0001089
+saving the model at the end of epoch 145, iters 3190
+End of epoch 145 / 200 	 Time Taken: 3 sec
+learning rate 0.0001089 -> 0.0001069
+(epoch: 146, iters: 10, time: 0.431, data: 0.003) G_GAN: 3.263 G_L1: 10.758 D_real: 0.021 D_fake: 0.054 
+End of epoch 146 / 200 	 Time Taken: 1 sec
+learning rate 0.0001069 -> 0.0001050
+End of epoch 147 / 200 	 Time Taken: 1 sec
+learning rate 0.0001050 -> 0.0001030
+End of epoch 148 / 200 	 Time Taken: 1 sec
+learning rate 0.0001030 -> 0.0001010
+End of epoch 149 / 200 	 Time Taken: 1 sec
+learning rate 0.0001010 -> 0.0000990
+(epoch: 150, iters: 22, time: 0.055, data: 0.001) G_GAN: 3.518 G_L1: 21.215 D_real: 0.000 D_fake: 0.041 
+saving the model at the end of epoch 150, iters 3300
+End of epoch 150 / 200 	 Time Taken: 3 sec
+learning rate 0.0000990 -> 0.0000970
+End of epoch 151 / 200 	 Time Taken: 1 sec
+learning rate 0.0000970 -> 0.0000950
+End of epoch 152 / 200 	 Time Taken: 1 sec
+learning rate 0.0000950 -> 0.0000931
+End of epoch 153 / 200 	 Time Taken: 1 sec
+learning rate 0.0000931 -> 0.0000911
+End of epoch 154 / 200 	 Time Taken: 1 sec
+learning rate 0.0000911 -> 0.0000891
+(epoch: 155, iters: 12, time: 0.056, data: 0.277) G_GAN: 1.851 G_L1: 9.631 D_real: 0.236 D_fake: 0.369 
+saving the model at the end of epoch 155, iters 3410
+End of epoch 155 / 200 	 Time Taken: 7 sec
+learning rate 0.0000891 -> 0.0000871
+End of epoch 156 / 200 	 Time Taken: 1 sec
+learning rate 0.0000871 -> 0.0000851
+End of epoch 157 / 200 	 Time Taken: 1 sec
+learning rate 0.0000851 -> 0.0000832
+End of epoch 158 / 200 	 Time Taken: 1 sec
+learning rate 0.0000832 -> 0.0000812
+End of epoch 159 / 200 	 Time Taken: 1 sec
+learning rate 0.0000812 -> 0.0000792
+(epoch: 160, iters: 2, time: 0.057, data: 0.001) G_GAN: 1.503 G_L1: 10.695 D_real: 0.279 D_fake: 0.381 
+saving the model at the end of epoch 160, iters 3520
+End of epoch 160 / 200 	 Time Taken: 3 sec
+learning rate 0.0000792 -> 0.0000772
+End of epoch 161 / 200 	 Time Taken: 1 sec
+learning rate 0.0000772 -> 0.0000752
+End of epoch 162 / 200 	 Time Taken: 1 sec
+learning rate 0.0000752 -> 0.0000733
+End of epoch 163 / 200 	 Time Taken: 1 sec
+learning rate 0.0000733 -> 0.0000713
+(epoch: 164, iters: 14, time: 0.481, data: 0.002) G_GAN: 1.653 G_L1: 9.611 D_real: 0.612 D_fake: 0.078 
+End of epoch 164 / 200 	 Time Taken: 1 sec
+learning rate 0.0000713 -> 0.0000693
+saving the model at the end of epoch 165, iters 3630
+End of epoch 165 / 200 	 Time Taken: 3 sec
+learning rate 0.0000693 -> 0.0000673
+End of epoch 166 / 200 	 Time Taken: 1 sec
+learning rate 0.0000673 -> 0.0000653
+End of epoch 167 / 200 	 Time Taken: 1 sec
+learning rate 0.0000653 -> 0.0000634
+End of epoch 168 / 200 	 Time Taken: 1 sec
+learning rate 0.0000634 -> 0.0000614
+(epoch: 169, iters: 4, time: 0.058, data: 0.001) G_GAN: 2.785 G_L1: 10.394 D_real: 0.392 D_fake: 0.055 
+End of epoch 169 / 200 	 Time Taken: 1 sec
+learning rate 0.0000614 -> 0.0000594
+saving the model at the end of epoch 170, iters 3740
+End of epoch 170 / 200 	 Time Taken: 3 sec
+learning rate 0.0000594 -> 0.0000574
+End of epoch 171 / 200 	 Time Taken: 1 sec
+learning rate 0.0000574 -> 0.0000554
+End of epoch 172 / 200 	 Time Taken: 1 sec
+learning rate 0.0000554 -> 0.0000535
+(epoch: 173, iters: 16, time: 0.056, data: 0.000) G_GAN: 1.965 G_L1: 10.496 D_real: 0.147 D_fake: 0.211 
+End of epoch 173 / 200 	 Time Taken: 1 sec
+learning rate 0.0000535 -> 0.0000515
+End of epoch 174 / 200 	 Time Taken: 1 sec
+learning rate 0.0000515 -> 0.0000495
+saving the model at the end of epoch 175, iters 3850
+End of epoch 175 / 200 	 Time Taken: 3 sec
+learning rate 0.0000495 -> 0.0000475
+End of epoch 176 / 200 	 Time Taken: 1 sec
+learning rate 0.0000475 -> 0.0000455
+End of epoch 177 / 200 	 Time Taken: 1 sec
+learning rate 0.0000455 -> 0.0000436
+(epoch: 178, iters: 6, time: 0.058, data: 0.001) G_GAN: 3.696 G_L1: 20.226 D_real: 0.001 D_fake: 0.031 
+End of epoch 178 / 200 	 Time Taken: 1 sec
+learning rate 0.0000436 -> 0.0000416
+End of epoch 179 / 200 	 Time Taken: 1 sec
+learning rate 0.0000416 -> 0.0000396
+saving the model at the end of epoch 180, iters 3960
+End of epoch 180 / 200 	 Time Taken: 3 sec
+learning rate 0.0000396 -> 0.0000376
+End of epoch 181 / 200 	 Time Taken: 1 sec
+learning rate 0.0000376 -> 0.0000356
+(epoch: 182, iters: 18, time: 0.523, data: 0.001) G_GAN: 3.795 G_L1: 10.428 D_real: 0.098 D_fake: 0.040 
+End of epoch 182 / 200 	 Time Taken: 1 sec
+learning rate 0.0000356 -> 0.0000337
+End of epoch 183 / 200 	 Time Taken: 1 sec
+learning rate 0.0000337 -> 0.0000317
+End of epoch 184 / 200 	 Time Taken: 1 sec
+learning rate 0.0000317 -> 0.0000297
+saving the model at the end of epoch 185, iters 4070
+End of epoch 185 / 200 	 Time Taken: 3 sec
+learning rate 0.0000297 -> 0.0000277
+End of epoch 186 / 200 	 Time Taken: 1 sec
+learning rate 0.0000277 -> 0.0000257
+(epoch: 187, iters: 8, time: 0.059, data: 0.001) G_GAN: 3.914 G_L1: 13.542 D_real: 0.055 D_fake: 0.035 
+End of epoch 187 / 200 	 Time Taken: 1 sec
+learning rate 0.0000257 -> 0.0000238
+End of epoch 188 / 200 	 Time Taken: 1 sec
+learning rate 0.0000238 -> 0.0000218
+End of epoch 189 / 200 	 Time Taken: 1 sec
+learning rate 0.0000218 -> 0.0000198
+saving the model at the end of epoch 190, iters 4180
+End of epoch 190 / 200 	 Time Taken: 3 sec
+learning rate 0.0000198 -> 0.0000178
+(epoch: 191, iters: 20, time: 0.056, data: 0.001) G_GAN: 3.442 G_L1: 11.638 D_real: 0.012 D_fake: 0.045 
+End of epoch 191 / 200 	 Time Taken: 1 sec
+learning rate 0.0000178 -> 0.0000158
+End of epoch 192 / 200 	 Time Taken: 1 sec
+learning rate 0.0000158 -> 0.0000139
+End of epoch 193 / 200 	 Time Taken: 1 sec
+learning rate 0.0000139 -> 0.0000119
+End of epoch 194 / 200 	 Time Taken: 1 sec
+learning rate 0.0000119 -> 0.0000099
+saving the model at the end of epoch 195, iters 4290
+End of epoch 195 / 200 	 Time Taken: 3 sec
+learning rate 0.0000099 -> 0.0000079
+(epoch: 196, iters: 10, time: 0.057, data: 0.001) G_GAN: 1.636 G_L1: 7.404 D_real: 0.555 D_fake: 0.234 
+End of epoch 196 / 200 	 Time Taken: 1 sec
+learning rate 0.0000079 -> 0.0000059
+End of epoch 197 / 200 	 Time Taken: 1 sec
+learning rate 0.0000059 -> 0.0000040
+End of epoch 198 / 200 	 Time Taken: 1 sec
+learning rate 0.0000040 -> 0.0000020
+End of epoch 199 / 200 	 Time Taken: 1 sec
+learning rate 0.0000020 -> 0.0000000
+(epoch: 200, iters: 22, time: 0.610, data: 0.002) G_GAN: 1.219 G_L1: 11.415 D_real: 0.262 D_fake: 0.430 
+saving the model at the end of epoch 200, iters 4400
+End of epoch 200 / 200 	 Time Taken: 3 sec
+slurmstepd-gpu3: error: Step 82279.4294967294 hit memory limit at least once during execution. This may or may not result in some failure.
