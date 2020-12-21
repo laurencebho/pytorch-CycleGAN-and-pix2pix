@@ -52,6 +52,11 @@ class AlignedDataset(BaseDataset):
         A = np.hstack((A0,A1))
         A = Image.fromarray(A.astype('uint8'), 'RGB')
 
+        #try switching?
+        temp = A
+        A = B
+        B = temp
+
         # apply the same transform to both A and B
         transform_params = get_params(self.opt, A.size)
         A_transform = get_transform(self.opt, transform_params, grayscale=(self.input_nc == 1))
