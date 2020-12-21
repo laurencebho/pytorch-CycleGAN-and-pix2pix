@@ -42,11 +42,12 @@ class AlignedDataset(BaseDataset):
         AB = Image.open(AB_path).convert('RGBA')
         # split AB image into A and B
         w, h = AB.size
-        A0 = AB.crop((0, 0, 224, h))
-        A1 = AB.crop((224, 0, 448, h))
+        A0 = np.array(AB.crop((0, 0, 224, h)))
+        A1 = np.array(AB.crop((224, 0, 448, h)))
         B = AB.crop((448, 0, w, h))
 
         A = np.hstack((A0,A1))
+        A = Image.fromarray(A.astype('uint8'), 'RGBA')
 
         # apply the same transform to both A and B
         transform_params = get_params(self.opt, A.size)
