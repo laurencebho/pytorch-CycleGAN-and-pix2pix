@@ -44,7 +44,9 @@ class AlignedDataset(BaseDataset):
         w, h = AB.size
         A0 = np.array(AB.crop((0, 0, 224, h)))
         A1 = np.array(AB.crop((224, 0, 448, h)))
-        B = AB.crop((448, 0, w, h))
+        B = np.array(AB.crop((448, 0, w, h)))
+        print(f'B SHAPE: {B.shape}')
+        A = Image.fromarray(B.astype('uint8'), 'RGBA')
 
         A = np.hstack((A0,A1))
         A = Image.fromarray(A.astype('uint8'), 'RGBA')
