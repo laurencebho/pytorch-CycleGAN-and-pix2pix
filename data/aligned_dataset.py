@@ -39,7 +39,7 @@ class AlignedDataset(BaseDataset):
         """
         # read a image given a random integer index
         AB_path = self.AB_paths[index]
-        AB = Image.open(AB_path).convert('RGBA')
+        AB = Image.open(AB_path).convert('RGB')
         # split AB image into A and B
         w, h = AB.size
         A0 = np.array(AB.crop((0, 0, 224, h)))
@@ -47,12 +47,10 @@ class AlignedDataset(BaseDataset):
         B = AB.crop((448, 0, w, h))
         B = np.array(B)
         shape = B.shape
-        if 4 not in shape:
-            raise Exception
-        B = Image.fromarray(B.astype('uint8'), 'RGBA')
+        B = Image.fromarray(B.astype('uint8'), 'RGB')
 
         A = np.hstack((A0,A1))
-        A = Image.fromarray(A.astype('uint8'), 'RGBA')
+        A = Image.fromarray(A.astype('uint8'), 'RGB')
 
         # apply the same transform to both A and B
         transform_params = get_params(self.opt, A.size)
