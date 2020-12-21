@@ -14,6 +14,6 @@ source ~/pix2pixenv/bin/activate
 module load cuda/10.1-cudnn7.6
 
 
-python train.py --dataroot ./datasets/sketchy --name sketchy_pix2pix --model pix2pix --direction BtoA --display_id=0 --input_nc 8 --output_nc 4
+python train.py --dataroot ./datasets/sketchy --name sketchy_pix2pix --model pix2pix --direction BtoA --display_id=0
 
-python train.py --dataroot ./datasets/sketchy --name sketchy_pix2pix --model pix2pix --direction BtoA --display_id=0 --input_nc 8 --output_nc 4
+python train.py --dataroot ./datasets/sketchy --name sketchy_pix2pix --model pix2pix --direction BtoA --display_id=0
