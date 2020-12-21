@@ -6,7 +6,7 @@
 #SBATCH --qos=short
 #SBATCH -t 01-00:00:00
 #SBATCH --job-name=pix2pixLaurie
-#SBATCH --mem=8G
+#SBATCH --mem=32G
 #SBATCH --mail-user laurence.ho@durham.ac.uk
 #SBATCH --mail-type=ALL
 
