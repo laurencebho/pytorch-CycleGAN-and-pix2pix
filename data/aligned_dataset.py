@@ -46,7 +46,7 @@ class AlignedDataset(BaseDataset):
         A1 = AB.crop((224, 0, 448, h))
         B = AB.crop((448, 0, w, h))
 
-        A = np.hstack(A0,A1)
+        A = np.hstack((A0,A1))
 
         # apply the same transform to both A and B
         transform_params = get_params(self.opt, A.size)
