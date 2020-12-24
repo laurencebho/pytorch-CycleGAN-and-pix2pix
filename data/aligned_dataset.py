@@ -39,31 +39,50 @@ class AlignedDataset(BaseDataset):
         """
         # read a image given a random integer index
         AB_path = self.AB_paths[index]
-        AB = Image.open(AB_path).convert('RGB')
+        AB = Image.open(AB_path).convert('RGBA')
         # split AB image into A and B
         w, h = AB.size
         A0 = np.array(AB.crop((0, 0, 224, h)))
         A1 = np.array(AB.crop((224, 0, 448, h)))
-        B = AB.crop((448, 0, w, h))
+        B = AB.crop((448, 0, w, h)).convert('RGB') #just 3 channels for B
+        '''
         B = np.array(B)
         shape = B.shape
         B = Image.fromarray(B.astype('uint8'), 'RGB')
+        '''
 
-        A = np.hstack((A0,A1))
+
+        #split A into 8 separate greyscale images
+        greyscale_ims = []
+        for arr in [A0, A1]:
+            for i in range(arr.shape[2]):
+                greyscale_im = Image.fromarray(arr[:, :, i].astype('uint8'))
+                greyscale_ims.append(greyscale_im)
+            
+
+        '''
+        A = np.hstack((A0,A1)) #np.stack(.. axis=2)
         A = Image.fromarray(A.astype('uint8'), 'RGB')
+        '''
 
-        #try switching?
-        temp = A
-        A = B
-        B = temp
 
         # apply the same transform to both A and B
         transform_params = get_params(self.opt, A.size)
-        A_transform = get_transform(self.opt, transform_params, grayscale=(self.input_nc == 1))
+        #A_transform = get_transform(self.opt, transform_params, grayscale=(self.input_nc == 1))
+        A_transform = get_transform(self.opt, transform_params, grayscale=(True))
         B_transform = get_transform(self.opt, transform_params, grayscale=(self.output_nc == 1))
 
-        A = A_transform(A)
+        for i, greyscale_im in enumerate(greyscale_ims):
+            greyscale_ims[i] = A_transform(greyscale_im)
+
         B = B_transform(B)
+
+        #convert A images back into a single numpy array
+        for i, greyscale_im in enumerate(greyscale_ims):
+            if i == 0:
+                A = greyscale_im
+            else:
+                A = np.concatenate((A, greyscale_im), axis=2)
 
         return {'A': A, 'B': B, 'A_paths': AB_path, 'B_paths': AB_path}
 
