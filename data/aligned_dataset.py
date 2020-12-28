@@ -51,6 +51,7 @@ class AlignedDataset(BaseDataset):
         B = Image.fromarray(B.astype('uint8'), 'RGB')
         '''
 
+        print(f'A0 shape: {A0.shape}')
 
         #split A into 8 separate greyscale images
         greyscale_ims = []
@@ -83,7 +84,7 @@ class AlignedDataset(BaseDataset):
             if i == 0:
                 A = greyscale_im
             else:
-                A = np.concatenate((A, greyscale_im), axis=2)
+                A = np.concatenate((A, greyscale_im), axis=0)
 
         print(f'A SHAPE: {A.shape}')
 
