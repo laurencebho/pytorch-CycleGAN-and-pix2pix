@@ -85,6 +85,8 @@ class AlignedDataset(BaseDataset):
             else:
                 A = np.concatenate((A, greyscale_im), axis=2)
 
+        print(f'A SHAPE: {A.shape}')
+
         return {'A': A, 'B': B, 'A_paths': AB_path, 'B_paths': AB_path}
 
     def __len__(self):
