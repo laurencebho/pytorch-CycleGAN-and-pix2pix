@@ -58,7 +58,10 @@ def save_image(image_numpy, image_path, aspect_ratio=1.0):
     print(f'Save image shape: {image_numpy.shape}')
     print(f'Max value in image: {image_numpy.max()}')
 
-    image_pil = Image.fromarray(image_numpy)
+    if image_numpy.shape[2] > 3:
+        image_pil = Image.fromarray(image_numpy[:3].astype(np.uint8))
+    else:
+        image_pil = Image.fromarray(image_numpy)
     h, w, _ = image_numpy.shape
 
     if aspect_ratio > 1.0:
