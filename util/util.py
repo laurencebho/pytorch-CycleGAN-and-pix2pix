@@ -59,8 +59,9 @@ def save_image(image_numpy, image_path, aspect_ratio=1.0):
     print(f'Max value in image: {image_numpy.max()}')
 
     if image_numpy.shape[2] > 3:
-        image_pil = Image.fromarray(image_numpy[:3].astype(np.uint8))
+        image_pil = Image.fromarray(image_numpy[:, :, :3].astype(np.uint8))
     else:
+        print('normal channel image')
         image_pil = Image.fromarray(image_numpy)
     h, w, _ = image_numpy.shape
 
