@@ -45,13 +45,13 @@ class AlignedDataset(BaseDataset):
         A0 = np.array(AB.crop((0, 0, 224, h)))
         A1 = np.array(AB.crop((224, 0, 448, h)))
         B = AB.crop((448, 0, w, h)).convert('RGB') #just 3 channels for B
-        '''
         B = np.array(B)
-        shape = B.shape
+        print(f'B shape: {B.shape}')
+        print(B[0][0][0]) #to check if same B is being used each time (it shouldn't be)
         B = Image.fromarray(B.astype('uint8'), 'RGB')
-        '''
 
         print(f'A0 shape: {A0.shape}')
+        print(f'A1 shape: {A1.shape}')
 
         #split A into 8 separate greyscale images
         greyscale_ims = []
@@ -86,7 +86,9 @@ class AlignedDataset(BaseDataset):
             else:
                 A = np.concatenate((A, greyscale_im), axis=0)
         
-        print(f'A SHAPE: {A.shape}')
+        print('')
+        print(f'A SHAPE after concatenation: {A.shape}')
+        print
 
         return {'A': A, 'B': B, 'A_paths': AB_path, 'B_paths': AB_path}
 
