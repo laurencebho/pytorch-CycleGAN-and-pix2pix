@@ -85,9 +85,13 @@ class AlignedDataset(BaseDataset):
                 A = greyscale_im
             else:
                 A = np.concatenate((A, greyscale_im), axis=0)
+
+        #turn B into a numpy array too (to match A)
+        B = np.array(B)
         
         print('')
         print(f'A SHAPE after concatenation: {A.shape}')
+        print(f'final B SHAPE: {B.shape}')
         print
 
         return {'A': A, 'B': B, 'A_paths': AB_path, 'B_paths': AB_path}
