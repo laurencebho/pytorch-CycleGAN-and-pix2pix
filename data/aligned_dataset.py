@@ -69,7 +69,6 @@ class AlignedDataset(BaseDataset):
 
         # apply the same transform to both A and B
         transform_params = get_params(self.opt, greyscale_ims[0].size)
-        #A_transform = get_transform(self.opt, transform_params, grayscale=(self.input_nc == 1))
         A_transform = get_transform(self.opt, transform_params, grayscale=(True))
         B_transform = get_transform(self.opt, transform_params, grayscale=(self.output_nc == 1))
 
