@@ -462,6 +462,7 @@ class UnetGenerator(nn.Module):
 
     def forward(self, input):
         """Standard forward"""
+        print(f'Unet input shape: {input.shape}')
         return self.model(input)
 
 
